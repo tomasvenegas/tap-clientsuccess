@@ -1,0 +1,82 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": ["integer"] },
+    "uuid": { "type": ["null", "string"] },
+    "name": { "type": ["null", "string"] },
+    "siteUrl": { "type": ["null", "string"] },
+    "clientSegmentId": { "type": ["null", "integer"] },
+    "clientSegment": { "type": ["null", "string"] },
+    "zip": { "type": ["null", "string"] },
+    "lastModifiedDate": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "modifiedByEmployeeId": { "type": ["null", "integer"] },
+    "statusId": { "type": ["null", "integer"] },
+    "createdDate": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "inceptionDate": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "createdByEmployeeId": { "type": ["null", "integer"] },
+    "linkedinUrl": { "type": ["null", "string"] },
+    "managedByEmployeeId": { "type": ["null", "integer"] },
+    "active": { "type": ["null", "boolean"] },
+    "successScore": { "type": ["null", "number"] },
+    "activeClientSuccessCycleId": { "type": ["null", "integer"] },
+    "crmCustomerId": { "type": ["null", "integer"] },
+    "note": { "type": ["null", "string"] },
+    "crmCustomerUrl": { "type": ["null", "string"] },
+    "zendeskId": { "type": ["null", "string"] },
+    "deskId": { "type": ["null", "string"] },
+    "terminatedDate": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "freshdeskId": { "type": ["null", "string"] },
+    "uservoiceId":{ "type": ["null", "string"] },
+    "assignedSalesRep": { "type": ["null", "string"] },
+    "assignedSalesRepId": { "type": ["null", "integer"] },
+    "successCycleId": { "type": ["null", "integer"] },
+    "salesforceAccountId": { "type": ["null", "string"] },
+    "jiraId": { "type": ["null", "string"] },
+    "usageId": { "type": ["null", "string"] },
+    "keyContactId": { "type": ["null", "string"] },
+    "street": { "type": ["null", "string"] },
+    "state": { "type": ["null", "string"] },
+    "country": { "type": ["null", "string"] },
+    "city": { "type": ["null", "string"] },
+    "timezone": { "type": ["null", "string"] },
+    "npsScore": { "type": ["null", "string"] },
+    "externalId": { "type": ["null", "string"] },
+    "currencyId": { "type": ["null", "integer"] },
+    "assignedCSM": { "type": ["null", "string"] },
+    "customFieldValues": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "clientId": { "type": ["null", "integer"] },
+          "fieldId": { "type": ["null", "integer"] },
+          "valueId": { "type": ["null", "integer"] },
+          "key": { "type": ["null", "string"] },
+          "name": { "type": ["null", "string"] },
+          "value": { "type": ["null", "string"] },
+          "label": { "type": ["null", "string"] },
+          "autoSync": { "type": ["null", "boolean"] },
+          "type": { "type": ["null", "string"] },
+          "sequence": { "type": ["null", "integer"] },
+          "push": { "type": ["null", "boolean"] },
+          "pull": { "type": ["null", "boolean"] }
+        }
+      }
+    }
+  }
+}
+

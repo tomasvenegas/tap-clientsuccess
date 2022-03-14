@@ -1,0 +1,78 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": ["integer"] },
+    "note": { "type": ["null", "string"] },
+    "createdByEmployeeId": { "type": ["null", "integer"] },
+    "createdDateTime": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "clientId": { "type": ["null", "integer"] },
+    "filePath": { "type": ["null", "string"] },
+    "interactionTypeId": { "type": ["null", "integer"] },
+    "contactIds": {
+      "type": [ "null", "array" ],
+      "items": {
+        "type": [ "null", "integer" ]
+      }
+    },
+    "contacts": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "firstName": { "type": ["null", "string"] },
+          "lastName": { "type": ["null", "string"] },
+          "email": { "type": ["null", "string"] }
+        }
+      }
+    },
+    "employeeIds": {
+      "type": [ "null", "array" ],
+      "items": {
+        "type": [ "null", "integer" ]
+      }
+    },
+    "subject": { "type": ["null", "string"] },
+    "externalSystemId": { "type": ["null", "integer"] },
+    "sourceId": { "type": ["null", "string"] },
+    "threadId": { "type": ["null", "string"] },
+    "to": {
+      "type": ["null", "array"],
+      "items": {
+        "type": [ "null", "object" ],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "name": { "type": ["null", "string"] },
+          "email": { "type": ["null", "string"] },
+          "typeId": { "type": ["null", "integer"] }
+        }
+      }
+    },
+    "cc": {
+      "type": ["null", "array"],
+      "items": {
+        "type": [ "null", "object" ],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "name": { "type": ["null", "string"] },
+          "email": { "type": ["null", "string"] },
+          "typeId": { "type": ["null", "integer"] }
+        }
+      }
+    },
+    "from": {
+      "id": { "type": ["null", "integer"] },
+      "name": { "type": ["null", "string"] },
+      "email": { "type": ["null", "string"] },
+      "typeId": { "type": ["null", "integer"] }
+    },
+    "author":{ "type": ["null", "string"] },
+    "url": { "type": ["null", "string"] },
+    "tags": { "type": ["null", "array"] },
+    "employees": { "type": ["null", "array"] }
+  }
+}
