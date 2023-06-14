@@ -21,9 +21,9 @@ class ClientSuccessStream(RESTStream):
             "expires_in": 43200 # 12 hours
         }
         """
-        username = self.config['username']
-        password = self.config['password']
-        body = f"username={username}&password={password}"
+        username = self.config["username"]
+        password = self.config["password"]
+        body = {"username": username, "password": password}
         response = requests.post(
             url="https://api.clientsuccess.com/v1/auth",
             headers={"Content-Type": "application/x-www-form-urlencoded"},
@@ -35,7 +35,7 @@ class ClientSuccessStream(RESTStream):
     @property
     def http_headers(self) -> dict:
         """Return the http headers needed."""
-        if not hasattr(self, 'access_token'):
+        if not hasattr(self, "access_token"):
             self._login()
 
         headers = {"Authorization": self.access_token}
