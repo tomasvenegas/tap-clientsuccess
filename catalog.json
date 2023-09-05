@@ -53,6 +53,7 @@
           "lastModifiedDate": {
             "format": "date-time",
             "type": [
+              "null",
               "string"
             ]
           },
@@ -71,12 +72,14 @@
           "createdDate": {
             "format": "date-time",
             "type": [
+              "null",
               "string"
             ]
           },
           "inceptionDate": {
             "format": "date-time",
             "type": [
+              "null",
               "string"
             ]
           },
@@ -107,7 +110,7 @@
           "successScore": {
             "type": [
               "null",
-              "integer"
+              "number"
             ]
           },
           "activeClientSuccessCycleId": {
@@ -149,6 +152,7 @@
           "terminatedDate": {
             "format": "date-time",
             "type": [
+              "null",
               "string"
             ]
           },
@@ -272,7 +276,7 @@
                 "clientId": {
                   "type": [
                     "null",
-                    "string"
+                    "integer"
                   ]
                 },
                 "fieldId": {
@@ -815,6 +819,7 @@
           "lastTouchDateTime": {
             "format": "date-time",
             "type": [
+              "null",
               "string"
             ]
           },
@@ -1462,6 +1467,151 @@
             ],
             "valid-replication-keys": [
               "createdDateTime"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "products",
+      "replication_method": "FULL_TABLE",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "integer"
+            ]
+          },
+          "active": {
+            "type": [
+              "boolean"
+            ]
+          },
+          "name": {
+            "type": [
+              "string"
+            ]
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "sku": {
+            "type": [
+              "string"
+            ]
+          },
+          "logo": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "recurring": {
+            "type": [
+              "boolean"
+            ]
+          },
+          "createdDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "products",
+      "metadata": [
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "active"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "description"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "sku"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "logo"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "recurring"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "createdDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": [
+              "id"
             ]
           }
         }

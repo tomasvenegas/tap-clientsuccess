@@ -34,6 +34,19 @@ class ClientsStream(ClientSuccessStream):
             "client_id": record["id"],
         }
 
+class ProductsStream(ClientSuccessStream):
+    """Products stream.
+
+    As of v1, this is a single query with no filter, so no replication key is needed.
+
+    https://clientsuccess.readme.io/v1.0/reference/listallproducts
+    """
+    name = "products"
+    path = "/products"
+    primary_keys = ["id"]
+    replication_key = None  # see doc above
+    schema_filepath = SCHEMAS_DIR / "products.json"
+
 
 class InteractionsStream(ClientSuccessStream):
     """Interactions Stream

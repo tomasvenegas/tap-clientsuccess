@@ -9,12 +9,14 @@ from tap_clientsuccess.streams import (
     ClientsStream,
     InteractionsStream,
     ClientDetailStream,
+    ProductsStream,
 )
 
 STREAM_TYPES = [
     ClientsStream,
     InteractionsStream,
     ClientDetailStream,
+    ProductsStream,
 ]
 
 
