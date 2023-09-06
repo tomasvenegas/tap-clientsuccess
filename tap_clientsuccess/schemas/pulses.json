@@ -1,0 +1,35 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": ["integer"] },
+    "riskLevelId": { "type": ["integer"] },
+    "clientId": { "type": ["integer"] },
+    "createdByEmployeeId": { "type": ["integer"] },
+    "note": { "type": ["string"] },
+    "createdTimestamp": {
+        "type": ["null", "string"],
+        "format": "date-time"
+    },
+    "productId": { "type": ["null", "string"] },
+    "riskLevel": { "type": ["string"] },
+    "riskLevelDiscription": { "type": ["null", "string"] },
+    "riskLevelScore": { "type": ["integer"] },
+    "numberOfDaysAtThisPosition": { "type": ["integer"] },
+    "reasonCodes": {
+        "type": ["null", "array"],
+        "items": {
+            "type": ["null", "object"],
+            "properties": {
+                "id": { "type": ["null", "integer"] },
+                "categoryId": { "type": ["null", "integer"] },
+                "categoryName": { "type": ["null", "string"] },
+                "description": { "type": ["null", "string"] },
+                "name": { "type": ["null", "string"] },
+                "reasonFactor": { "type": ["null", "string"] },
+                "sequence": { "type": ["null", "integer"] }
+            }
+        }
+    }
+  }
+}

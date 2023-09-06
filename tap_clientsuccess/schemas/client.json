@@ -52,7 +52,7 @@
     "country": { "type": ["null", "string"] },
     "city": { "type": ["null", "string"] },
     "timezone": { "type": ["null", "string"] },
-    "npsScore": { "type": ["null", "string"] },
+    "npsScore": { "type": ["null", "integer"] },
     "externalId": { "type": ["null", "string"] },
     "currencyId": { "type": ["null", "integer"] },
     "assignedCSM": { "type": ["null", "string"] },

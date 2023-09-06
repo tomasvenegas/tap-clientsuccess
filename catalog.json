@@ -243,7 +243,7 @@
           "npsScore": {
             "type": [
               "null",
-              "string"
+              "integer"
             ]
           },
           "externalId": {
@@ -1693,6 +1693,262 @@
             "selected": true,
             "table-key-properties": [
               "id"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "pulses",
+      "replication_key": "createdTimestamp",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "integer"
+            ]
+          },
+          "riskLevelId": {
+            "type": [
+              "integer"
+            ]
+          },
+          "clientId": {
+            "type": [
+              "integer"
+            ]
+          },
+          "createdByEmployeeId": {
+            "type": [
+              "integer"
+            ]
+          },
+          "note": {
+            "type": [
+              "string"
+            ]
+          },
+          "createdTimestamp": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "productId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "riskLevel": {
+            "type": [
+              "string"
+            ]
+          },
+          "riskLevelDiscription": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "riskLevelScore": {
+            "type": [
+              "integer"
+            ]
+          },
+          "numberOfDaysAtThisPosition": {
+            "type": [
+              "integer"
+            ]
+          },
+          "reasonCodes": {
+            "items": {
+              "properties": {
+                "id": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "categoryId": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "categoryName": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "description": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "name": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "reasonFactor": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "sequence": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                }
+              },
+              "type": [
+                "null",
+                "object"
+              ]
+            },
+            "type": [
+              "null",
+              "array"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "pulses",
+      "metadata": [
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "riskLevelId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "clientId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "createdByEmployeeId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "note"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "createdTimestamp"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "productId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "riskLevel"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "riskLevelDiscription"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "riskLevelScore"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "numberOfDaysAtThisPosition"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "reasonCodes"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": [
+              "id"
+            ],
+            "valid-replication-keys": [
+              "createdTimestamp"
             ]
           }
         }
