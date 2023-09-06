@@ -1084,6 +1084,30 @@
               "array"
             ]
           },
+          "tagIds": {
+            "items": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "emailMessageMeta": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "googleCalendarEvent": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
           "contacts": {
             "items": {
               "properties": {
@@ -1343,6 +1367,33 @@
         {
           "breadcrumb": [
             "properties",
+            "tagIds"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "emailMessageMeta"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "googleCalendarEvent"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
             "contacts"
           ],
           "metadata": {
@@ -1523,6 +1574,18 @@
               "null",
               "string"
             ]
+          },
+          "uuid": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "salesforceId": {
+            "type": [
+              "null",
+              "string"
+            ]
           }
         },
         "type": [
@@ -1600,6 +1663,24 @@
           "breadcrumb": [
             "properties",
             "createdDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "uuid"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "salesforceId"
           ],
           "metadata": {
             "inclusion": "available"
