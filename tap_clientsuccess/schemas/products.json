@@ -12,6 +12,8 @@
     "createdDate": {
       "type": ["null", "string"],
       "format": "date-time"
-    }
+    },
+    "uuid": { "type": ["null", "string"] },
+    "salesforceId": { "type": ["null", "string"] }
   }
 }
