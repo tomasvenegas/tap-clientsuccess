@@ -1,0 +1,59 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": ["integer"] },
+    "uuid": { "type": ["null", "string"] },
+    "clientId": { "type": ["integer"] },
+    "statusId": { "type": ["null", "integer"] },
+    "email": { "type": ["null", "string"] },
+    "phone": { "type": ["null", "string"] },
+    "mobile": { "type": ["null", "string"] },
+    "title": { "type": ["null", "string"] },
+    "linkedinUrl": { "type": ["null", "string"] },
+    "firstName": { "type": ["null", "string"] },
+    "lastName": { "type": ["null", "string"] },
+    "note": { "type": ["null", "string"] },
+    "executiveSponsor": { "type": ["boolean"] },
+    "advocate": { "type": ["boolean"] },
+    "champion": { "type": ["boolean"] },
+    "starred": { "type": ["boolean"] },
+    "keyContact": { "type": ["boolean"] },
+    "street": { "type": ["null", "string"] },
+    "city": { "type": ["null", "string"] },
+    "zip": { "type": ["null", "string"] },
+    "country": { "type": ["null", "string"] },
+    "timezone": { "type": ["null", "string"] },
+    "salesforceId": { "type": ["null", "string"] },
+    "externalId": { "type": ["null", "string"] },
+    "client": { "type": ["null", "string"] },
+    "lastEngagement": { "type": ["null", "string"] },
+    "engagementCount": { "type": ["null", "integer"] },
+    "usageId": { "type": ["null", "string"] },
+    "name": { "type": ["null", "string"] },
+    "preferredName": { "type": ["null", "string"] },
+    "photoUrl": { "type": ["null", "string"] },
+    "contactState": { "type": ["null", "string"] },
+    "customFieldValues": {
+        "type": ["null", "array"],
+        "items": {
+            "type": ["null", "object"],
+            "properties": {
+                "id": { "type": ["null", "integer"] },
+                "contactId": { "type": ["null", "integer"] },
+                "fieldId": { "type": ["null", "integer"] },
+                "valueId": { "type": ["null", "string"] },
+                "key": { "type": ["null", "string"] },
+                "name": { "type": ["null", "string"] },
+                "value": { "type": ["null", "string"] },
+                "label": { "type": ["null", "string"] },
+                "autoSync": { "type": ["null", "boolean"] },
+                "type": { "type": ["null", "string"] },
+                "sequence": { "type": ["null", "integer"] },
+                "push": { "type": ["null", "boolean"] },
+                "pull": { "type": ["null", "boolean"] }
+            }
+        }
+    }
+  }
+}

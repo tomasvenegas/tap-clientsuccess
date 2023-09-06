@@ -2,7 +2,7 @@
 
 import datetime
 from pathlib import Path
-from typing import Any, Dict, Optional, Union, Iterable, cast
+from typing import Any, Dict, Iterable, Optional, Union, cast
 
 import pendulum
 import requests
@@ -33,6 +33,19 @@ class ClientsStream(ClientSuccessStream):
         return {
             "client_id": record["id"],
         }
+
+class ProductsStream(ClientSuccessStream):
+    """Products stream.
+
+    As of v1, this is a single query with no filter, so no replication key is needed.
+
+    https://clientsuccess.readme.io/v1.0/reference/listallproducts
+    """
+    name = "products"
+    path = "/products"
+    primary_keys = ["id"]
+    replication_key = None  # see doc above
+    schema_filepath = SCHEMAS_DIR / "products.json"
 
 
 class InteractionsStream(ClientSuccessStream):
@@ -106,3 +119,78 @@ class ClientDetailStream(ClientSuccessStream):
     primary_keys = ["id"]
     replication_key = "lastModifiedDate"
     schema_filepath = SCHEMAS_DIR / "client.json"
+
+class PulseStream(ClientSuccessStream):
+    """Client Pulse
+
+    https://clientsuccess.readme.io/v1.0/reference/listallpulsesofaclient
+    """
+    name = "pulses"
+    parent_stream_type = ClientsStream
+    ignore_parent_replication_keys = True
+    path = "/clients/{client_id}/pulses"
+    primary_keys = ["id"]
+    replication_key = "createdTimestamp"
+    schema_filepath = SCHEMAS_DIR / "pulses.json"
+
+    def __init__(
+        self,
+        tap: TapBaseClass,
+        name: Optional[str] = None,
+        schema: Optional[Union[Dict[str, Any], Schema]] = None,
+        path: Optional[str] = None,
+    ):
+        super().__init__(tap=tap, name=name, schema=schema, path=path)
+        self._current_response_new_records_count = 0
+
+    def parse_response(self, response: requests.Response) -> Iterable[dict]:
+        """Parse the response and return an iterator of result rows."""
+        self.reset_records_counter()
+        yield from extract_jsonpath(self.records_jsonpath, input=response.json())
+
+    def post_process(self, row: dict, context: Optional[dict] = None) -> Optional[dict]:
+        starting_timestamp = self.get_starting_timestamp(context)
+        record_replication_key_value = cast(datetime.datetime, pendulum.parse(row[self.replication_key]))
+        if starting_timestamp is None or starting_timestamp < record_replication_key_value:
+            self.count_record()
+            return row
+        return None
+
+    def count_record(self):
+        self._current_response_new_records_count += 1
+
+    def reset_records_counter(self):
+        self._current_response_new_records_count = 0
+
+    @property
+    def new_records_count(self):
+        return self._current_response_new_records_count
+
+class ContactStream(ClientSuccessStream):
+    """Client Contacts
+
+    https://clientsuccess.readme.io/v1.0/reference/listallcontactsofaclient
+    """
+    name = "contacts"
+    parent_stream_type = ClientsStream
+    ignore_parent_replication_keys = True
+    path = "/clients/{client_id}/contacts"
+    primary_keys = ["id"]
+    replication_key = "id"
+    schema_filepath = SCHEMAS_DIR / "contacts.json"
+
+    def __init__(
+        self,
+        tap: TapBaseClass,
+        name: Optional[str] = None,
+        schema: Optional[Union[Dict[str, Any], Schema]] = None,
+        path: Optional[str] = None,
+    ):
+        super().__init__(tap=tap, name=name, schema=schema, path=path)
+    
+    def parse_response(self, response: requests.Response) -> Iterable[dict]:
+        """Parse the response and return an iterator of result rows."""
+        yield from extract_jsonpath(self.records_jsonpath, input=response.json())
+
+    def post_process(self, row: dict, context: Optional[dict] = None) -> Optional[dict]:
+        return row
