@@ -2,7 +2,7 @@
 
 import datetime
 from pathlib import Path
-from typing import Any, Dict, Optional, Union, Iterable, cast
+from typing import Any, Dict, Iterable, Optional, Union, cast
 
 import pendulum
 import requests
@@ -165,3 +165,32 @@ class PulseStream(ClientSuccessStream):
     @property
     def new_records_count(self):
         return self._current_response_new_records_count
+
+class ContactStream(ClientSuccessStream):
+    """Client Contacts
+
+    https://clientsuccess.readme.io/v1.0/reference/listallcontactsofaclient
+    """
+    name = "contacts"
+    parent_stream_type = ClientsStream
+    ignore_parent_replication_keys = True
+    path = "/clients/{client_id}/contacts"
+    primary_keys = ["id"]
+    replication_key = "id"
+    schema_filepath = SCHEMAS_DIR / "contacts.json"
+
+    def __init__(
+        self,
+        tap: TapBaseClass,
+        name: Optional[str] = None,
+        schema: Optional[Union[Dict[str, Any], Schema]] = None,
+        path: Optional[str] = None,
+    ):
+        super().__init__(tap=tap, name=name, schema=schema, path=path)
+    
+    def parse_response(self, response: requests.Response) -> Iterable[dict]:
+        """Parse the response and return an iterator of result rows."""
+        yield from extract_jsonpath(self.records_jsonpath, input=response.json())
+
+    def post_process(self, row: dict, context: Optional[dict] = None) -> Optional[dict]:
+        return row
