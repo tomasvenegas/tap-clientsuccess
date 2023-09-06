@@ -18,6 +18,14 @@
         "type": [ "null", "integer" ]
       }
     },
+    "tagIds": {
+        "type": [ "null", "array" ],
+        "items": {
+          "type": [ "null", "integer" ]
+        }
+      },
+    "emailMessageMeta": { "type": ["null", "string"] },
+    "googleCalendarEvent": { "type": ["null", "string"] },
     "contacts": {
       "type": ["null", "array"],
       "items": {
