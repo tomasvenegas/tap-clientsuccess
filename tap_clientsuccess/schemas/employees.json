@@ -4,18 +4,18 @@
   "properties": {
     "id": { "type": ["integer"] },
     "uuid": { "type": ["string"] },
-    "type": { "type": ["string"] },
-    "email": { "type": ["string"] },
-    "userId": { "type": ["integer"] },
-    "title": { "type": ["string"] },
-    "department": { "type": ["string"] },
-    "roleId": { "type": ["integer"] },
-    "statusId": { "type": ["integer"] },
+    "type": { "type": ["null","string"] },
+    "email": { "type": ["null","string"] },
+    "userId": { "type": ["null","integer"] },
+    "title": { "type": ["null","string"] },
+    "department": { "type": ["null", "string"] },
+    "roleId": { "type": ["null","integer"] },
+    "statusId": { "type": ["null","integer"] },
     "lastUsedTime": { "type": ["null", "integer"] },
     "createdTime": { "type": ["null", "integer"] },
     "modifiedTime": { "type": ["null", "integer"] },
-    "active": { "type": ["boolean"] },
-    "firstName": { "type": ["string"] },
-    "lastName": { "type": ["string"] }
+    "active": { "type": ["null","boolean"] },
+    "firstName": { "type": ["null","string"] },
+    "lastName": { "type": ["null","string"] }
   }
 }
