@@ -1,0 +1,11 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": ["integer"] },
+    "uuid": { "type": ["string"] },
+    "type": { "type": ["string"] },
+    "email": { "type": ["string"] },
+    "userId": { "type": ["integer"] }
+  }
+}
