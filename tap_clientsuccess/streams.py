@@ -47,6 +47,32 @@ class ProductsStream(ClientSuccessStream):
     replication_key = None  # see doc above
     schema_filepath = SCHEMAS_DIR / "products.json"
 
+class EmployeesStream(ClientSuccessStream):
+    """Employees stream.
+
+    As of v1, this is a single query with no filter, so no replication key is needed.
+
+    https://clientsuccess.readme.io/v1.0/reference/listallemployees
+    """
+    name = "employees"
+    path = "/employees"
+    primary_keys = ["id"]
+    replication_key = None  # see doc above
+    schema_filepath = SCHEMAS_DIR / "employees.json"
+
+class StatusesStream(ClientSuccessStream):
+    """Statuses stream.
+
+    As of v1, this is a single query with no filter, so no replication key is needed.
+
+    https://clientsuccess.readme.io/v1.0/reference/listallstatuses
+    """
+    name = "statuses"
+    path = "/client-statuses"
+    primary_keys = ["id"]
+    replication_key = None  # see doc above
+    schema_filepath = SCHEMAS_DIR / "statuses.json"
+
 
 class InteractionsStream(ClientSuccessStream):
     """Interactions Stream

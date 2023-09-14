@@ -1,0 +1,21 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": ["integer"] },
+    "uuid": { "type": ["string"] },
+    "type": { "type": ["null","string"] },
+    "email": { "type": ["null","string"] },
+    "userId": { "type": ["null","integer"] },
+    "title": { "type": ["null","string"] },
+    "department": { "type": ["null", "string"] },
+    "roleId": { "type": ["null","integer"] },
+    "statusId": { "type": ["null","integer"] },
+    "lastUsedTime": { "type": ["null", "integer"] },
+    "createdTime": { "type": ["null", "integer"] },
+    "modifiedTime": { "type": ["null", "integer"] },
+    "active": { "type": ["null","boolean"] },
+    "firstName": { "type": ["null","string"] },
+    "lastName": { "type": ["null","string"] }
+  }
+}
