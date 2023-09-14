@@ -6,6 +6,16 @@
     "uuid": { "type": ["string"] },
     "type": { "type": ["string"] },
     "email": { "type": ["string"] },
-    "userId": { "type": ["integer"] }
+    "userId": { "type": ["integer"] },
+    "title": { "type": ["string"] },
+    "department": { "type": ["string"] },
+    "roleId": { "type": ["integer"] },
+    "statusId": { "type": ["integer"] },
+    "lastUsedTime": { "type": ["null", "integer"] },
+    "createdTime": { "type": ["null", "integer"] },
+    "modifiedTime": { "type": ["null", "integer"] },
+    "active": { "type": ["boolean"] },
+    "firstName": { "type": ["string"] },
+    "lastName": { "type": ["string"] }
   }
 }
