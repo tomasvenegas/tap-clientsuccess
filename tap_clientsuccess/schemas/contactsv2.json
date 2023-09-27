@@ -1,0 +1,118 @@
+{
+    "type": ["null", "object"],
+    "additionalProperties": true,
+    "properties": {
+      "id": { "type": ["integer"] },
+      "tenantId": { "type": ["integer"] },
+      "tenantClientId": { "type": ["integer"] },
+      "uuid": { "type": ["null", "string"] },
+      "status": { "type": ["null", "string"] },
+      "firstName": { "type": ["null", "string"] },
+      "lastName": { "type": ["null", "string"] },
+      "title": { "type": ["null", "string"] },
+      "email": { "type": ["null", "string"] },
+      "phone": { "type": ["null", "string"] },
+      "mobile": { "type": ["null", "string"] },
+      "salesforceId": { "type": ["null", "string"] },
+      "linkedinUrl": { "type": ["null", "string"] },
+      "advocate": { "type": ["boolean"] },
+      "champion": { "type": ["boolean"] },
+      "executiveSponsor": { "type": ["boolean"] },
+      "starred": { "type": ["boolean"] },
+      "keyContact": { "type": ["boolean"] },
+      "street": { "type": ["null", "string"] },
+      "city": { "type": ["null", "string"] },
+      "state": { "type": ["null", "string"] },
+      "zip": { "type": ["null", "string"] },
+      "country": { "type": ["null", "string"] },
+      "timezone": { "type": ["null", "string"] },
+      "note": { "type": ["null", "string"] },
+      "tenantClient": {
+            "type": ["null", "object"],
+            "properties": {
+                "id": { "type": ["null", "integer"] },
+                "uuid": { "type": ["null", "string"] },
+                "name": { "type": ["null", "string"] },
+                "status": { "type": ["null", "string"] }
+                }
+        },
+      "custom": {
+            "type": ["null", "object"],
+            "properties": {
+                "producto__cs": { "type": ["null", "array"] },
+                "idioma__cs": { "type": ["null", "string"] },
+                "hubspot_id__cs": { "type": ["null", "string"] },
+                "no_envio_de_links__cs": { "type": ["null", "boolean"] },
+                "no_update_producto__cs": { "type": ["null", "boolean"] }
+                }
+        },
+      "createdTime": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "modifiedTime": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "engagementCount": { "type": ["null", "integer"] },
+      "lastEngagementDate": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "entityType": { "type": ["null", "string"] },
+      "npsResult": {
+            "type": ["null", "object"],
+            "properties": {
+                "lastCampaignResponseId": { "type": ["null", "integer"] },
+                "lastCampaignResponseDate": {
+                    "type": ["null", "string"],
+                    "format": "date-time"
+                  },
+                "lastCampaignScore": { "type": ["null", "integer"] },
+                "lastCampaignComment": { "type": ["null", "string"] },
+                "lastResentResponseId": { "type": ["null", "integer"] },
+                "lastResentTime": {
+                  "type": ["null", "string"],
+                  "format": "date-time"
+                },
+                "lastResentScore": { "type": ["null", "integer"] },
+                "lastResentComment": { "type": ["null", "string"] },
+                "lastCampaign": {
+                        "type": ["null", "object"],
+                        "properties": {
+                            "uuid": { "type": ["null", "string"] },
+                            "name": { "type": ["null", "string"] }
+                            }
+                    },
+                "lastResentCampaign": {
+                  "type": ["null", "object"],
+                  "properties": {
+                      "uuid": { "type": ["null", "string"] },
+                      "name": { "type": ["null", "string"] }
+                      }
+              }
+                
+            }
+        },
+      "engagements": {
+        "type": ["null", "array"],
+        "items": {
+            "type": ["null", "object"],
+            "properties": {
+                "interactionTypeId": { "type": ["null", "integer"] },
+                "interactionCount": { "type": ["null", "integer"] },
+                "lastInteractionDate": {
+                    "type": ["null", "string"],
+                    "format": "date-time"
+                  },
+                "engagementCount": { "type": ["null", "integer"] },
+                "lastEngagementDate": {
+                    "type": ["null", "string"],
+                    "format": "date-time"
+                  }
+                }
+            }
+        }
+    }
+  }
+  
