@@ -154,7 +154,7 @@ class ClientStreamV2(ClientSuccessStream):
     name = "clientv2"
     path = "/client/search"
     primary_keys = ["id"]
-    replication_key = None  # see doc above
+    replication_key = "modifiedTime"
     schema_filepath = SCHEMAS_DIR / "clientv2.json"
     url_base = "https://api.clientsuccess.com/v2"
 
@@ -167,7 +167,7 @@ class ContactStreamV2(ClientSuccessStream):
     name = "contactsv2"
     path = "/contact/search"
     primary_keys = ["id"]
-    replication_key = None  # see doc above
+    replication_key = "modifiedTime"
     schema_filepath = SCHEMAS_DIR / "clientv2.json"
     url_base = "https://api.clientsuccess.com/v2"
 
