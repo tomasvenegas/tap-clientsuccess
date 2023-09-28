@@ -146,7 +146,12 @@ class ClientDetailStream(ClientSuccessStream):
     replication_key = "lastModifiedDate"
     schema_filepath = SCHEMAS_DIR / "client.json"
 
-class ClientStreamV2(ClientSuccessStream):
+class ClientSuccessStreamV2(ClientSuccessStream):
+
+    url_base = "https://api.clientsuccess.com/v2"
+    records_jsonpath = "$.data[*]"
+
+class ClientStreamV2(ClientSuccessStreamV2):
     """Client stream.
 
     https://clientsuccess.readme.io/reference/searchclients
@@ -156,10 +161,10 @@ class ClientStreamV2(ClientSuccessStream):
     primary_keys = ["id"]
     replication_key = None  # see doc above
     schema_filepath = SCHEMAS_DIR / "clientv2.json"
-    url_base = "https://api.clientsuccess.com/v2"
+    
 
 
-class ContactStreamV2(ClientSuccessStream):
+class ContactStreamV2(ClientSuccessStreamV2):
     """Contact stream.
 
     https://clientsuccess.readme.io/reference/searchcontacts
@@ -169,7 +174,6 @@ class ContactStreamV2(ClientSuccessStream):
     primary_keys = ["id"]
     replication_key = None  # see doc above
     schema_filepath = SCHEMAS_DIR / "clientv2.json"
-    url_base = "https://api.clientsuccess.com/v2"
 
 
 class PulseStream(ClientSuccessStream):
