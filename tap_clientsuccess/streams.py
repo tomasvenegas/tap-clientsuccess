@@ -173,7 +173,7 @@ class ContactStreamV2(ClientSuccessStreamV2):
     path = "/contact/search"
     primary_keys = ["id"]
     replication_key = "modifiedTime"
-    schema_filepath = SCHEMAS_DIR / "clientv2.json"
+    schema_filepath = SCHEMAS_DIR / "contactsv2.json"
 
 
 class PulseStream(ClientSuccessStream):
