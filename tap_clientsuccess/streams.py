@@ -166,6 +166,7 @@ class ClientSuccessStreamV2(ClientSuccessStream):
         starting_date = self.get_starting_timestamp(context)
         if starting_date:
             params["modifiedAfter"] = starting_date.strftime('%Y-%m-%d')
+            params["sortBy"] = self.replication_key
 
         if next_page_token is not None:
             params["page"] = next_page_token
