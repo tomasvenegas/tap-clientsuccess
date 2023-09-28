@@ -25,7 +25,7 @@ class ClientSuccessStream(RESTStream):
         password = self.config["password"]
         body = {"username": username, "password": password}
         response = requests.post(
-            url=f"{self.url_base}/auth",
+            url=f"https://api.clientsuccess.com/v1/auth",
             headers={"Content-Type": "application/x-www-form-urlencoded"},
             data=body,
         )
