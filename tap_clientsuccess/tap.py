@@ -15,6 +15,7 @@ from tap_clientsuccess.streams import (
     StatusesStream,
     ClientStreamV2,
     ContactStreamV2,
+    ContractStream,
 )
 
 STREAM_TYPES = [
@@ -28,6 +29,7 @@ STREAM_TYPES = [
     StatusesStream,
     ClientStreamV2,
     ContactStreamV2,
+    ContractStream,
 ]
 
 

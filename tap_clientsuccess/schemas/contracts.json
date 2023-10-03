@@ -1,0 +1,229 @@
+{
+    "type": ["null", "object"],
+    "additionalProperties": false,
+    "properties": {
+      "id": { "type": ["integer"] },
+      "uuid": { "type": ["null", "string"] },
+      "tenantId": { "type": ["integer"] },
+      "tenantClientId": { "type": ["null", "integer"] },
+      "name": { "type": ["null", "string"] },
+      "description": { "type": ["null", "string"] },
+      "note": { "type": ["null", "string"] },
+      "bookingDate": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "probability": { "type": ["null", "integer"] },
+      "currency": { "type": ["null", "string"] },
+      "assignedArr": { "type": ["null", "integer"] },
+      "assignedMrr": { "type": ["null", "integer"] },
+      "terminatedDate": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "terminatedEffectiveDate": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "termStartDate": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "termEndDate": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "termLengthDays": { "type": ["null", "integer"] },
+      "total": { "type": ["null", "integer"] },
+      "acv": { "type": ["null", "integer"] },
+      "arr": { "type": ["null", "integer"] },
+      "mrr": { "type": ["null", "integer"] },
+      "tcv": { "type": ["null", "integer"] },
+      "recurring": { "type": ["null", "boolean"] },
+      "autoRenew": { "type": ["null", "boolean"] },
+      "externalId": { "type": ["null", "string"] },
+      "createdByEmployeeId": { "type": ["null", "integer"] },
+      "modifiedByEmployeeId": { "type": ["null", "integer"] },
+      "createdTime": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "modifiedTime": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "bookedByEmployee": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "firstname": { "type": ["null", "string"] },
+          "lastname": { "type": ["null", "string"] },
+          "email": { "type": ["null", "string"] },
+          "reportTo": { "type": ["null", "integer"] },
+          "picture": { "type": ["null", "string"] },
+          "name": { "type": ["null", "string"] }
+        }
+      },
+      "terminatedByEmployee": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "firstname": { "type": ["null", "string"] },
+          "lastname": { "type": ["null", "string"] },
+          "email": { "type": ["null", "string"] },
+          "reportTo": { "type": ["null", "integer"] },
+          "picture": { "type": ["null", "string"] },
+          "name": { "type": ["null", "string"] }
+        }
+      },
+      "meta": {
+          "type": ["null", "object"],
+          "properties": {
+            "id": { "type": ["null", "integer"] },
+            "type": { "type": ["null", "string"] },
+            "status": { "type": ["null", "string"] },
+            "currentStatus": { "type": ["null", "string"] }
+          }
+      },
+      "client": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "status": { "type": ["null", "string"] }
+        }
+      },
+      "renews": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "uuid": { "type": ["null", "string"] },
+          "name": { "type": ["null", "string"] },
+          "tcv": { "type": ["null", "integer"] },
+          "arr": { "type": ["null", "integer"] },
+          "bookingDate": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          },
+          "termStartDate": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          },
+          "termEndDate": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          }
+        }
+      },
+      "renewedBy": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "uuid": { "type": ["null", "string"] },
+          "name": { "type": ["null", "string"] },
+          "tcv": { "type": ["null", "integer"] },
+          "arr": { "type": ["null", "integer"] },
+          "bookingDate": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          },
+          "termStartDate": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          },
+          "termEndDate": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          }
+        }
+      },
+      "adjusts": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "uuid": { "type": ["null", "string"] },
+          "name": { "type": ["null", "string"] },
+          "tcv": { "type": ["null", "integer"] },
+          "arr": { "type": ["null", "integer"] },
+          "bookingDate": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          },
+          "termStartDate": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          },
+          "termEndDate": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          }
+        }
+      },
+      "adjustedBy": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "uuid": { "type": ["null", "string"] },
+          "name": { "type": ["null", "string"] },
+          "tcv": { "type": ["null", "integer"] },
+          "arr": { "type": ["null", "integer"] },
+          "bookingDate": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          },
+          "termStartDate": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          },
+          "termEndDate": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          }
+        }
+      },
+      "items": {
+        "type": ["null", "array"],
+        "items": {
+            "type": ["null", "object"],
+            "properties": {
+                "id": { "type": ["null", "integer"] },
+                "uuid": { "type": ["null", "string"] },
+                "tenantId": { "type": ["null", "integer"] },
+                "tenantContractId": { "type": ["null", "integer"] },
+                "lineNumber": { "type": ["null", "integer"] },
+                "productCode": { "type": ["null", "string"] },
+                "description": { "type": ["null", "string"] },
+                "quantity": { "type": ["null", "integer"] },
+                "total": { "type": ["null", "integer"] },
+                "recurring": { "type": ["null", "boolean"] },
+                "termStartDate": {
+                    "type": ["null", "string"],
+                    "format": "date-time"
+                  },
+                "termEndDate": {
+                    "type": ["null", "string"],
+                    "format": "date-time"
+                  },
+                "assignedArr": { "type": ["null", "integer"] },
+                "assignedMrr": { "type": ["null", "integer"] },
+                "pricePer": { "type": ["null", "integer"] },
+                "termLengthDays": { "type": ["null", "integer"] },
+                "arr": { "type": ["null", "integer"] },
+                "mrr": { "type": ["null", "integer"] },
+                "externalId": { "type": ["null", "string"] }, 
+                "createdTime": {
+                    "type": ["null", "string"],
+                    "format": "date-time"
+                  },
+                "modifiedTime": {
+                    "type": ["null", "string"],
+                    "format": "date-time"
+                  },
+                "termLengthMonths": { "type": ["null", "integer"] }               
+                },
+            "otr": { "type": ["null", "integer"] },
+            "termLengthMonths": { "type": ["null", "integer"] },
+            "attachmentCount": { "type": ["null", "integer"] }   
+            }
+        }
+    }
+  }

@@ -199,6 +199,18 @@ class ContactStreamV2(ClientSuccessStreamV2):
     schema_filepath = SCHEMAS_DIR / "contactsv2.json"
 
 
+class ContractStream(ClientSuccessStreamV2):
+    """Contact stream.
+
+    https://clientsuccess.readme.io/reference/search_1
+    """
+    name = "contracts"
+    path = "/contract/search"
+    primary_keys = ["id"]
+    replication_key = "modifiedTime"
+    schema_filepath = SCHEMAS_DIR / "contracts.json"
+
+
 class PulseStream(ClientSuccessStream):
     """Client Pulse
 
