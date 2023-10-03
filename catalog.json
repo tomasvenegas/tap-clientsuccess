@@ -1023,7 +1023,8 @@
     },
     {
       "tap_stream_id": "clientv2",
-      "replication_method": "FULL_TABLE",
+      "replication_key": "modifiedTime",
+      "replication_method": "INCREMENTAL",
       "key_properties": [
         "id"
       ],
@@ -1700,6 +1701,9 @@
             "selected": true,
             "table-key-properties": [
               "id"
+            ],
+            "valid-replication-keys": [
+              "modifiedTime"
             ]
           }
         }
@@ -2314,7 +2318,8 @@
     },
     {
       "tap_stream_id": "contactsv2",
-      "replication_method": "FULL_TABLE",
+      "replication_key": "modifiedTime",
+      "replication_method": "INCREMENTAL",
       "key_properties": [
         "id"
       ],
@@ -2330,25 +2335,12 @@
               "integer"
             ]
           },
+          "tenantClientId": {
+            "type": [
+              "integer"
+            ]
+          },
           "uuid": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "name": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "siteUrl": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "zip": {
             "type": [
               "null",
               "string"
@@ -2360,72 +2352,77 @@
               "string"
             ]
           },
-          "inceptionDate": {
-            "format": "date-time",
+          "firstName": {
             "type": [
               "null",
               "string"
             ]
           },
-          "assignedSalesRep": {
+          "lastName": {
             "type": [
               "null",
               "string"
             ]
           },
-          "active": {
+          "title": {
             "type": [
               "null",
+              "string"
+            ]
+          },
+          "email": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "phone": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "mobile": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "salesforceId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "linkedinUrl": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "advocate": {
+            "type": [
               "boolean"
             ]
           },
-          "successScore": {
+          "champion": {
             "type": [
-              "null",
-              "integer"
+              "boolean"
             ]
           },
-          "activeClientSuccessCycleId": {
+          "executiveSponsor": {
             "type": [
-              "null",
-              "integer"
+              "boolean"
             ]
           },
-          "zendeskId": {
+          "starred": {
             "type": [
-              "null",
-              "string"
+              "boolean"
             ]
           },
-          "terminatedDate": {
-            "format": "date-time",
+          "keyContact": {
             "type": [
-              "null",
-              "string"
-            ]
-          },
-          "salesforceAccountId": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "usageId": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "stripeId": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "regionId": {
-            "type": [
-              "null",
-              "integer"
+              "boolean"
             ]
           },
           "street": {
@@ -2446,6 +2443,12 @@
               "string"
             ]
           },
+          "zip": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
           "country": {
             "type": [
               "null",
@@ -2458,34 +2461,80 @@
               "string"
             ]
           },
-          "externalId": {
+          "notes": {
             "type": [
               "null",
               "string"
             ]
           },
-          "npsScore": {
+          "tenantClient": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "uuid": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "status": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
             "type": [
               "null",
-              "integer"
+              "object"
             ]
           },
-          "note": {
+          "custom": {
+            "properties": {
+              "producto__cs": {
+                "type": [
+                  "null",
+                  "array"
+                ]
+              },
+              "idioma__cs": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "hubspot_id__cs": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "no_envio_de_links__cs": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "no_update_producto__cs": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              }
+            },
             "type": [
               "null",
-              "string"
-            ]
-          },
-          "createdByEmployeeId": {
-            "type": [
-              "null",
-              "integer"
-            ]
-          },
-          "modifiedByEmployeeId": {
-            "type": [
-              "null",
-              "integer"
+              "object"
             ]
           },
           "createdTime": {
@@ -2502,30 +2551,115 @@
               "string"
             ]
           },
+          "engagementCount": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "lastEngagementDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
           "entityType": {
             "type": [
               "null",
               "string"
             ]
           },
-          "clientType": {
+          "npsResult": {
             "properties": {
-              "id": {
+              "lastCampaignResponseId": {
                 "type": [
                   "null",
                   "integer"
                 ]
               },
-              "title": {
+              "lastCampaignResponseDate": {
+                "format": "date-time",
                 "type": [
                   "null",
                   "string"
                 ]
               },
-              "key": {
+              "lastCampaignScore": {
                 "type": [
                   "null",
                   "integer"
+                ]
+              },
+              "lastCampaignComment": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "lastResentResponseId": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "lastResentTime": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "lastResentScore": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "lastResentComment": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "lastCampaign": {
+                "properties": {
+                  "uuid": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "name": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                },
+                "type": [
+                  "null",
+                  "object"
+                ]
+              },
+              "lastResentCampaign": {
+                "properties": {
+                  "uuid": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "name": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                },
+                "type": [
+                  "null",
+                  "object"
                 ]
               }
             },
@@ -2534,130 +2668,50 @@
               "object"
             ]
           },
-          "managedByEmployee": {
-            "properties": {
-              "id": {
-                "type": [
-                  "null",
-                  "integer"
-                ]
+          "engagements": {
+            "items": {
+              "properties": {
+                "interactionTypeId": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "interactionCount": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "lastInteractionDate": {
+                  "format": "date-time",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "engagementCount": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "lastEngagementDate": {
+                  "format": "date-time",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
               },
-              "firstname": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "lastname": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "email": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "reportTo": {
-                "type": [
-                  "null",
-                  "integer"
-                ]
-              },
-              "picture": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "name": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              }
+              "type": [
+                "null",
+                "object"
+              ]
             },
             "type": [
               "null",
-              "object"
-            ]
-          },
-          "assignedSalesRepAssociation": {
-            "properties": {
-              "id": {
-                "type": [
-                  "null",
-                  "integer"
-                ]
-              },
-              "firstname": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "lastname": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "email": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "reportTo": {
-                "type": [
-                  "null",
-                  "integer"
-                ]
-              },
-              "picture": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "name": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              }
-            },
-            "type": [
-              "null",
-              "object"
-            ]
-          },
-          "primaryContact": {
-            "properties": {
-              "id": {
-                "type": [
-                  "null",
-                  "integer"
-                ]
-              },
-              "firstname": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "lastname": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              }
-            },
-            "type": [
-              "null",
-              "object"
+              "array"
             ]
           }
         },
@@ -2665,7 +2719,7 @@
           "null",
           "object"
         ],
-        "additionalProperties": false
+        "additionalProperties": true
       },
       "stream": "contactsv2",
       "metadata": [
@@ -2690,34 +2744,16 @@
         {
           "breadcrumb": [
             "properties",
+            "tenantClientId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
             "uuid"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "name"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "siteUrl"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "zip"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2735,7 +2771,7 @@
         {
           "breadcrumb": [
             "properties",
-            "inceptionDate"
+            "firstName"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2744,7 +2780,7 @@
         {
           "breadcrumb": [
             "properties",
-            "assignedSalesRep"
+            "lastName"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2753,7 +2789,7 @@
         {
           "breadcrumb": [
             "properties",
-            "active"
+            "title"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2762,7 +2798,7 @@
         {
           "breadcrumb": [
             "properties",
-            "successScore"
+            "email"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2771,7 +2807,7 @@
         {
           "breadcrumb": [
             "properties",
-            "activeClientSuccessCycleId"
+            "phone"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2780,7 +2816,7 @@
         {
           "breadcrumb": [
             "properties",
-            "zendeskId"
+            "mobile"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2789,7 +2825,7 @@
         {
           "breadcrumb": [
             "properties",
-            "terminatedDate"
+            "salesforceId"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2798,7 +2834,7 @@
         {
           "breadcrumb": [
             "properties",
-            "salesforceAccountId"
+            "linkedinUrl"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2807,7 +2843,7 @@
         {
           "breadcrumb": [
             "properties",
-            "usageId"
+            "advocate"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2816,7 +2852,7 @@
         {
           "breadcrumb": [
             "properties",
-            "stripeId"
+            "champion"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2825,7 +2861,25 @@
         {
           "breadcrumb": [
             "properties",
-            "regionId"
+            "executiveSponsor"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "starred"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "keyContact"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2861,6 +2915,15 @@
         {
           "breadcrumb": [
             "properties",
+            "zip"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
             "country"
           ],
           "metadata": {
@@ -2879,7 +2942,7 @@
         {
           "breadcrumb": [
             "properties",
-            "externalId"
+            "notes"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2888,7 +2951,883 @@
         {
           "breadcrumb": [
             "properties",
-            "npsScore"
+            "tenantClient"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "custom"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "createdTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "modifiedTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "engagementCount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "lastEngagementDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "entityType"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "npsResult"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "engagements"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": [
+              "id"
+            ],
+            "valid-replication-keys": [
+              "modifiedTime"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "contracts",
+      "replication_key": "modifiedTime",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "integer"
+            ]
+          },
+          "uuid": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "tenantId": {
+            "type": [
+              "integer"
+            ]
+          },
+          "tenantClientId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "note": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "bookingDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "probability": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "currency": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "assignedArr": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "assignedMrr": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "terminatedDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "terminatedEffectiveDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "termStartDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "termEndDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "termLengthDays": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "total": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "acv": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "arr": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "mrr": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "tcv": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "recurring": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "autoRenew": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "externalId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "createdByEmployeeId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "modifiedByEmployeeId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "createdTime": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "modifiedTime": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "bookedByEmployee": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "firstname": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "lastname": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "email": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "reportTo": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "picture": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "terminatedByEmployee": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "firstname": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "lastname": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "email": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "reportTo": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "picture": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "meta": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "type": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "status": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "currentStatus": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "client": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "status": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "renews": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "uuid": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "tcv": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "arr": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "bookingDate": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "termStartDate": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "termEndDate": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "renewedBy": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "uuid": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "tcv": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "arr": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "bookingDate": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "termStartDate": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "termEndDate": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "adjusts": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "uuid": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "tcv": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "arr": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "bookingDate": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "termStartDate": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "termEndDate": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "adjustedBy": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "uuid": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "tcv": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "arr": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "bookingDate": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "termStartDate": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "termEndDate": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "items": {
+            "items": {
+              "properties": {
+                "id": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "uuid": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "tenantId": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "tenantContractId": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "lineNumber": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "productCode": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "description": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "quantity": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "total": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "recurring": {
+                  "type": [
+                    "null",
+                    "boolean"
+                  ]
+                },
+                "termStartDate": {
+                  "format": "date-time",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "termEndDate": {
+                  "format": "date-time",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "assignedArr": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "assignedMrr": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "pricePer": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "termLengthDays": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "arr": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "mrr": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "externalId": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "createdTime": {
+                  "format": "date-time",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "modifiedTime": {
+                  "format": "date-time",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "termLengthMonths": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                }
+              },
+              "type": [
+                "null",
+                "object"
+              ]
+            },
+            "type": [
+              "null",
+              "array"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "contracts",
+      "metadata": [
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "uuid"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tenantId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tenantClientId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "description"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2898,6 +3837,168 @@
           "breadcrumb": [
             "properties",
             "note"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "bookingDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "probability"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "currency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "assignedArr"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "assignedMrr"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "terminatedDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "terminatedEffectiveDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "termStartDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "termEndDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "termLengthDays"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "total"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "acv"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "arr"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "mrr"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tcv"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "recurring"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "autoRenew"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "externalId"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2942,7 +4043,7 @@
         {
           "breadcrumb": [
             "properties",
-            "entityType"
+            "bookedByEmployee"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2951,7 +4052,7 @@
         {
           "breadcrumb": [
             "properties",
-            "clientType"
+            "terminatedByEmployee"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2960,7 +4061,7 @@
         {
           "breadcrumb": [
             "properties",
-            "managedByEmployee"
+            "meta"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2969,7 +4070,7 @@
         {
           "breadcrumb": [
             "properties",
-            "assignedSalesRepAssociation"
+            "client"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2978,7 +4079,43 @@
         {
           "breadcrumb": [
             "properties",
-            "primaryContact"
+            "renews"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "renewedBy"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "adjusts"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "adjustedBy"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "items"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2991,6 +4128,9 @@
             "selected": true,
             "table-key-properties": [
               "id"
+            ],
+            "valid-replication-keys": [
+              "modifiedTime"
             ]
           }
         }
