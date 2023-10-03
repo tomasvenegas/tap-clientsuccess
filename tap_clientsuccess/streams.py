@@ -146,6 +146,71 @@ class ClientDetailStream(ClientSuccessStream):
     replication_key = "lastModifiedDate"
     schema_filepath = SCHEMAS_DIR / "client.json"
 
+
+
+class ClientSuccessStreamV2(ClientSuccessStream):
+
+    url_base = "https://api.clientsuccess.com/v2"
+    records_jsonpath = "$.data[*]"
+
+    def get_next_page_token(self, response, previous_token):
+        data = response.json()
+        page = data.get("page")
+        last = data.get("last", True)
+        next_page_token = page + 1 if not last else None
+        return next_page_token
+
+    def get_url_params(self, context, next_page_token):
+        params = {}
+
+        starting_date = self.get_starting_timestamp(context)
+        if starting_date:
+            params["modifiedAfter"] = starting_date.strftime('%Y-%m-%d')
+            params["sortBy"] = self.replication_key
+
+        if next_page_token is not None:
+            params["page"] = next_page_token
+
+        self.logger.info("QUERY PARAMS: %s", params)
+        return params
+
+class ClientStreamV2(ClientSuccessStreamV2):
+    """Client stream.
+
+    https://clientsuccess.readme.io/reference/searchclients
+    """
+    name = "clientv2"
+    path = "/client/search"
+    primary_keys = ["id"]
+    replication_key = "modifiedTime"
+    schema_filepath = SCHEMAS_DIR / "clientv2.json"
+    
+
+
+class ContactStreamV2(ClientSuccessStreamV2):
+    """Contact stream.
+
+    https://clientsuccess.readme.io/reference/searchcontacts
+    """
+    name = "contactsv2"
+    path = "/contact/search"
+    primary_keys = ["id"]
+    replication_key = "modifiedTime"
+    schema_filepath = SCHEMAS_DIR / "contactsv2.json"
+
+
+class ContractStream(ClientSuccessStreamV2):
+    """Contact stream.
+
+    https://clientsuccess.readme.io/reference/search_1
+    """
+    name = "contracts"
+    path = "/contract/search"
+    primary_keys = ["id"]
+    replication_key = "modifiedTime"
+    schema_filepath = SCHEMAS_DIR / "contracts.json"
+
+
 class PulseStream(ClientSuccessStream):
     """Client Pulse
 

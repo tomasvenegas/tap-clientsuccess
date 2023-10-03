@@ -1,0 +1,89 @@
+{
+    "type": ["null", "object"],
+    "additionalProperties": false,
+    "properties": {
+      "id": { "type": ["integer"] },
+      "tenantId": { "type": ["integer"] },
+      "uuid": { "type": ["null", "string"] },
+      "name": { "type": ["null", "string"] },
+      "siteUrl": { "type": ["null", "string"] },
+      "zip": { "type": ["null", "string"] },
+      "status": { "type": ["null", "string"] },
+      "inceptionDate": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "assignedSalesRep": { "type": ["null", "string"] },
+      "active": { "type": ["null", "boolean"] },
+      "successScore": { "type": ["null", "integer"] },
+      "activeClientSuccessCycleId": { "type": ["null", "integer"] },
+      "zendeskId": { "type": ["null", "string"] },
+      "terminatedDate": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "salesforceAccountId": { "type": ["null", "string"] },
+      "usageId": { "type": ["null", "string"] },
+      "stripeId": { "type": ["null", "string"] },
+      "regionId": { "type": ["null", "integer"] },
+      "street": { "type": ["null", "string"] },
+      "city": { "type": ["null", "string"] },
+      "state": { "type": ["null", "string"] },
+      "country": { "type": ["null", "string"] },
+      "timezone": { "type": ["null", "string"] },
+      "externalId": { "type": ["null", "string"] },
+      "npsScore": { "type": ["null", "integer"] },
+      "note": { "type": ["null", "string"] },
+      "createdByEmployeeId": { "type": ["null", "integer"] },
+      "modifiedByEmployeeId": { "type": ["null", "integer"] },
+      "createdTime": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "modifiedTime": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "entityType": { "type": ["null", "string"] },
+      "clientType": {
+          "type": ["null", "object"],
+          "properties": {
+            "id": { "type": ["null", "integer"] },
+            "title": { "type": ["null", "string"] },
+            "key": { "type": ["null", "integer"] }
+          }
+      },
+      "managedByEmployee": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "firstname": { "type": ["null", "string"] },
+          "lastname": { "type": ["null", "string"] },
+          "email": { "type": ["null", "string"] },
+          "reportTo": { "type": ["null", "integer"] },
+          "picture": { "type": ["null", "string"] },
+          "name": { "type": ["null", "string"] }
+        }
+    },
+      "assignedSalesRepAssociation": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "firstname": { "type": ["null", "string"] },
+          "lastname": { "type": ["null", "string"] },
+          "email": { "type": ["null", "string"] },
+          "reportTo": { "type": ["null", "integer"] },
+          "picture": { "type": ["null", "string"] },
+          "name": { "type": ["null", "string"] }
+        }
+    },
+      "primaryContact": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "firstname": { "type": ["null", "string"] },
+          "lastname": { "type": ["null", "string"] }
+        }
+    }
+    }
+  }
