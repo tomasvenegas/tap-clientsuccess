@@ -184,7 +184,27 @@ class ClientStreamV2(ClientSuccessStreamV2):
     primary_keys = ["id"]
     replication_key = "modifiedTime"
     schema_filepath = SCHEMAS_DIR / "clientv2.json"
+
+    def get_child_context(self, record: dict, context: Optional[dict]) -> dict:
+        """Return a context dictionary for child streams."""
+        return {
+            "client_uuid": record["uuid"],
+        }
+
+
+class ClientDetailStreamV2(ClientSuccessStream):
+    """Client Detail Stream
+
+    https://clientsuccess.readme.io/reference/getoneclient
+    """
+    name = "clientv2_detail"
+    parent_stream_type = ClientStreamV2
+    path = "/client/{client_uuid}"
+    primary_keys = ["id"]
+    schema_filepath = SCHEMAS_DIR / "clientv2_detail.json"
+    state_partitioning_keys = []
     
+    url_base = "https://api.clientsuccess.com/v2"
 
 
 class ContactStreamV2(ClientSuccessStreamV2):
@@ -197,6 +217,12 @@ class ContactStreamV2(ClientSuccessStreamV2):
     primary_keys = ["id"]
     replication_key = "modifiedTime"
     schema_filepath = SCHEMAS_DIR / "contactsv2.json"
+
+    def get_child_context(self, record: dict, context: Optional[dict]) -> dict:
+        """Return a context dictionary for child streams."""
+        return {
+            "client_uuid": record["uuid"],
+        }
 
 
 class ContactDetailStreamV2(ClientSuccessStream):
@@ -212,12 +238,6 @@ class ContactDetailStreamV2(ClientSuccessStream):
     state_partitioning_keys = []
     
     url_base = "https://api.clientsuccess.com/v2"
-
-    def get_child_context(self, record: dict, context: Optional[dict]) -> dict:
-        """Return a context dictionary for child streams."""
-        return {
-            "client_uuid": record["uuid"],
-        }
 
 class ContractStream(ClientSuccessStreamV2):
     """Contact stream.

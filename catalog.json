@@ -1369,50 +1369,6 @@
               "null",
               "object"
             ]
-          },
-          "externalSystems": {
-            "properties": {
-              "HUBSPOT": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "FRESHDESK": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "FRESHDESK_V2": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "INTERCOM": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "ZOHOCRM": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "PIPEDRIVE": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              }
-            },
-            "type": [
-              "null",
-              "object"
-            ]
           }
         },
         "type": [
@@ -1739,6 +1695,1113 @@
           }
         },
         {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": [
+              "id"
+            ],
+            "valid-replication-keys": [
+              "modifiedTime"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "clientv2_detail",
+      "replication_method": "FULL_TABLE",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "integer"
+            ]
+          },
+          "createdTime": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "modifiedTime": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "uuid": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "logoUrl": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "siteUrl": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "zip": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "inceptionDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "assignedSalesRep": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "active": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "successScore": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "activeClientSuccessCycleId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "zendeskId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "freshdeskId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "terminatedDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "salesforceAccountId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "usageId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "stripeId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "externalStatusId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "street": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "city": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "state": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "country": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "region": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "tenantId": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "used": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "timezone": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "externalId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "npsScore": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "note": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "currency": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "accTeamingRoles": {
+            "items": {
+              "properties": {
+                "id": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "tenantId": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "clientId": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "employee": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "role": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              },
+              "type": [
+                "null",
+                "object"
+              ]
+            },
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "assignedSalesRepAssociation": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "firstname": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "lastname": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "email": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "reportTo": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "picture": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "managedByEmployee": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "firstname": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "lastname": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "email": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "reportTo": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "picture": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "createdByEmployee": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "firstname": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "lastname": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "email": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "reportTo": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "picture": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "modifiedByEmployee": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "firstname": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "lastname": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "email": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "reportTo": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "picture": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "primaryContact": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "firstname": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "lastname": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "clientType": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "title": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "key": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "clientSegmentId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "segment": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "parentClient": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "uuid": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "externalId": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "clientTypeId": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "managedByEmployeeId": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "regionId": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "externalSystems": {
+                "properties": {
+                  "HUBSPOT": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "FRESHDESK": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "FRESHDESK_V2": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "INTERCOM": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "ZOHOCRM": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "PIPEDRIVE": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                },
+                "type": [
+                  "null",
+                  "object"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "address": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "modifiedByEmployeeId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "noteAsText": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "externalSystems": {
+            "properties": {
+              "HUBSPOT": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "FRESHDESK": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "FRESHDESK_V2": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "INTERCOM": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ZOHOCRM": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "PIPEDRIVE": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "clientv2_detail",
+      "metadata": [
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "createdTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "modifiedTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "uuid"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "logoUrl"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "siteUrl"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "zip"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "inceptionDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "assignedSalesRep"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "active"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "successScore"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "activeClientSuccessCycleId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "zendeskId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "freshdeskId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "terminatedDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "salesforceAccountId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "usageId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "stripeId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "externalStatusId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "street"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "city"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "state"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "country"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "region"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "timezone"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "externalId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "npsScore"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "note"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "currency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "accTeamingRoles"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "assignedSalesRepAssociation"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "managedByEmployee"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "createdByEmployee"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "modifiedByEmployee"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "primaryContact"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "clientType"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "clientSegmentId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "segment"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "parentClient"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "address"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "modifiedByEmployeeId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "noteAsText"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
           "breadcrumb": [
             "properties",
             "externalSystems"
@@ -1754,9 +2817,6 @@
             "selected": true,
             "table-key-properties": [
               "id"
-            ],
-            "valid-replication-keys": [
-              "modifiedTime"
             ]
           }
         }
