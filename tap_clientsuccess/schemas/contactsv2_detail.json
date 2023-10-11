@@ -1,0 +1,89 @@
+{
+    "type": ["null", "object"],
+    "additionalProperties": true,
+    "properties": {
+      "id": { "type": ["integer"] },
+      "createdTime": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "modifiedTime": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "custom": {
+        "type": ["null", "object"],
+        "properties": {
+            "producto__cs": { "type": ["null", "array"] },
+            "idioma__cs": { "type": ["null", "string"] },
+            "hubspot_id__cs": { "type": ["null", "string"] },
+            "no_envio_de_links__cs": { "type": ["null", "boolean"] },
+            "no_update_producto__cs": { "type": ["null", "boolean"] }
+            }
+    },
+     "uuid": { "type": ["null", "string"] },
+      "status": { "type": ["null", "string"] },
+      "firstName": { "type": ["null", "string"] },
+      "lastName": { "type": ["null", "string"] },
+      "title": { "type": ["null", "string"] },
+      "email": { "type": ["null", "string"] },
+      "phone": { "type": ["null", "string"] },
+      "mobile": { "type": ["null", "string"] },
+      "salesforceId": { "type": ["null", "string"] },
+      "linkedinUrl": { "type": ["null", "string"] },
+      "advocate": { "type": ["boolean"] },
+      "champion": { "type": ["boolean"] },
+      "executiveSponsor": { "type": ["boolean"] },
+      "starred": { "type": ["boolean"] },
+      "keyContact": { "type": ["boolean"] },
+      "street": { "type": ["null", "string"] },
+      "city": { "type": ["null", "string"] },
+      "state": { "type": ["null", "string"] },
+      "zip": { "type": ["null", "string"] },
+      "country": { "type": ["null", "string"] },
+      "timezone": { "type": ["null", "string"] },
+      "notes": { "type": ["null", "string"] },
+      "externalId": { "type": ["null", "string"] },
+      "usageId": { "type": ["null", "string"] },
+      "engagementCount": { "type": ["null", "integer"] },
+      "lastEngagementDate": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "tenant": {
+        "type": ["null", "object"],
+        "properties": {
+            "id": { "type": ["null", "integer"] },
+            "name": { "type": ["null", "string"] }
+        }
+    },
+    "tenantClient": {
+        "type": ["null", "object"],
+        "properties": {
+            "id": { "type": ["null", "integer"] },
+            "uuid": { "type": ["null", "string"] },
+            "name": { "type": ["null", "string"] },
+            "status": { "type": ["null", "string"] }
+            }
+    },
+      "address": { "type": ["null", "string"] },
+      "badges": {
+        "type": ["null", "array"],
+        "items": {
+            "type": ["null", "string"]
+        }
+      },
+    "externalSystems": {
+        "type": ["null", "object"],
+        "properties": {
+            "HUBSPOT": { "type": ["null", "string"] },
+            "FRESHDESK": { "type": ["null", "string"] },
+            "FRESHDESK_V2": { "type": ["null", "string"] },
+            "INTERCOM": { "type": ["null", "string"] },
+            "ZOHOCRM": { "type": ["null", "string"] },
+            "PIPEDRIVE": { "type": ["null", "string"] }
+        }
+      }
+    }
+  }
+  

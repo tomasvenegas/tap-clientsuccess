@@ -1,0 +1,173 @@
+{
+    "type": ["null", "object"],
+    "additionalProperties": false,
+    "properties": {
+      "id": { "type": ["integer"] },
+      "createdTime": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "modifiedTime": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "uuid": { "type": ["null", "string"] },
+      "name": { "type": ["null", "string"] },
+      "logoUrl": { "type": ["null", "string"] },
+      "siteUrl": { "type": ["null", "string"] },
+      "zip": { "type": ["null", "string"] },
+      "status": { "type": ["null", "string"] },
+      "inceptionDate": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "assignedSalesRep": { "type": ["null", "string"] },
+      "active": { "type": ["null", "boolean"] },
+      "successScore": { "type": ["null", "number"] },
+      "activeClientSuccessCycleId": { "type": ["null", "integer"] },
+      "zendeskId": { "type": ["null", "string"] },
+      "freshdeskId": { "type": ["null", "string"] },
+      "terminatedDate": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "salesforceAccountId": { "type": ["null", "string"] },
+      "usageId": { "type": ["null", "string"] },
+      "stripeId": { "type": ["null", "string"] },
+      "externalStatusId": { "type": ["null", "string"] },
+      "street": { "type": ["null", "string"] },
+      "city": { "type": ["null", "string"] },
+      "state": { "type": ["null", "string"] },
+      "country": { "type": ["null", "string"] },
+      "region": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "tenantId": { "type": ["null", "integer"] },
+          "name": { "type": ["null", "string"] },
+          "used": { "type": ["null", "integer"] }
+        }
+    },
+    "timezone": { "type": ["null", "string"] },
+    "externalId": { "type": ["null", "string"] },
+    "npsScore": { "type": ["null", "integer"] },
+    "note": { "type": ["null", "string"] },
+    "currency": { "type": ["null", "string"] },
+    "accTeamingRoles": {
+        "type": ["null", "array"],
+        "items": {
+          "type": ["null", "object"],
+          "properties": {
+            "id": { "type": ["null", "integer"] },
+            "tenantId": { "type": ["null", "integer"] },
+            "clientId": { "type": ["null", "integer"] },
+            "employee": { "type": ["null", "string"] },
+            "role": { "type": ["null", "string"] }
+          }
+        }
+      },
+      "assignedSalesRepAssociation": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "firstname": { "type": ["null", "string"] },
+          "lastname": { "type": ["null", "string"] },
+          "email": { "type": ["null", "string"] },
+          "reportTo": { "type": ["null", "integer"] },
+          "picture": { "type": ["null", "string"] },
+          "name": { "type": ["null", "string"] }
+        }
+    },
+    "managedByEmployee": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "firstname": { "type": ["null", "string"] },
+          "lastname": { "type": ["null", "string"] },
+          "email": { "type": ["null", "string"] },
+          "reportTo": { "type": ["null", "integer"] },
+          "picture": { "type": ["null", "string"] },
+          "name": { "type": ["null", "string"] }
+        }
+    },
+    "createdByEmployee": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "firstname": { "type": ["null", "string"] },
+          "lastname": { "type": ["null", "string"] },
+          "email": { "type": ["null", "string"] },
+          "reportTo": { "type": ["null", "integer"] },
+          "picture": { "type": ["null", "string"] },
+          "name": { "type": ["null", "string"] }
+        }
+    },
+    "modifiedByEmployee": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "firstname": { "type": ["null", "string"] },
+          "lastname": { "type": ["null", "string"] },
+          "email": { "type": ["null", "string"] },
+          "reportTo": { "type": ["null", "integer"] },
+          "picture": { "type": ["null", "string"] },
+          "name": { "type": ["null", "string"] }
+        }
+    },
+    "primaryContact": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "firstname": { "type": ["null", "string"] },
+          "lastname": { "type": ["null", "string"] }
+        }
+    },
+    "clientType": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "title": { "type": ["null", "string"] },
+          "key": { "type": ["null", "integer"] }
+        }
+    },
+    "clientSegmentId": { "type": ["null", "integer"] },
+    "segment": { "type": ["null", "integer"] },
+    "parentClient": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": { "type": ["null", "integer"] },
+          "uuid": { "type": ["null", "string"] },
+          "name": { "type": ["null", "string"] },
+          "externalId": { "type": ["null", "string"] },
+          "clientTypeId": { "type": ["null", "integer"] },
+          "managedByEmployeeId": { "type": ["null", "integer"] },
+          "regionId": { "type": ["null", "integer"] },
+          "externalSystems": {
+            "type": ["null", "object"],
+            "properties": {
+                "HUBSPOT": { "type": ["null", "string"] },
+                "FRESHDESK": { "type": ["null", "string"] },
+                "FRESHDESK_V2": { "type": ["null", "string"] },
+                "INTERCOM": { "type": ["null", "string"] },
+                "ZOHOCRM": { "type": ["null", "string"] },
+                "PIPEDRIVE": { "type": ["null", "string"] }
+            }
+          }
+        }
+    },
+    "address": { "type": ["null", "string"] },
+    "modifiedByEmployeeId": { "type": ["null", "integer"] },
+    "noteAsText": { "type": ["null", "string"] },
+    "externalSystems": {
+        "type": ["null", "object"],
+        "properties": {
+            "HUBSPOT": { "type": ["null", "string"] },
+            "FRESHDESK": { "type": ["null", "string"] },
+            "FRESHDESK_V2": { "type": ["null", "string"] },
+            "INTERCOM": { "type": ["null", "string"] },
+            "ZOHOCRM": { "type": ["null", "string"] },
+            "PIPEDRIVE": { "type": ["null", "string"] }
+        }
+      }
+    }
+  }
