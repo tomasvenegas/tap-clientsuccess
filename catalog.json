@@ -1369,6 +1369,50 @@
               "null",
               "object"
             ]
+          },
+          "externalSystems": {
+            "properties": {
+              "HUBSPOT": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "FRESHDESK": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "FRESHDESK_V2": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "INTERCOM": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ZOHOCRM": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "PIPEDRIVE": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
           }
         },
         "type": [
@@ -1689,6 +1733,15 @@
           "breadcrumb": [
             "properties",
             "primaryContact"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "externalSystems"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2713,6 +2766,50 @@
               "null",
               "array"
             ]
+          },
+          "externalSystems": {
+            "properties": {
+              "HUBSPOT": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "FRESHDESK": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "FRESHDESK_V2": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "INTERCOM": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ZOHOCRM": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "PIPEDRIVE": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
           }
         },
         "type": [
@@ -3024,6 +3121,15 @@
           "breadcrumb": [
             "properties",
             "engagements"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "externalSystems"
           ],
           "metadata": {
             "inclusion": "available"
