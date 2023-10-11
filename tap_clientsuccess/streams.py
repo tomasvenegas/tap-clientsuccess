@@ -199,6 +199,26 @@ class ContactStreamV2(ClientSuccessStreamV2):
     schema_filepath = SCHEMAS_DIR / "contactsv2.json"
 
 
+class ContactDetailStreamV2(ClientSuccessStream):
+    """Client Detail Stream
+
+    https://clientsuccess.readme.io/reference/getonecontact
+    """
+    name = "contactsv2_detail"
+    parent_stream_type = ContactStreamV2
+    path = "/contact/{client_uuid}"
+    primary_keys = ["id"]
+    schema_filepath = SCHEMAS_DIR / "contactsv2_detail.json"
+    state_partitioning_keys = []
+    
+    url_base = "https://api.clientsuccess.com/v2"
+
+    def get_child_context(self, record: dict, context: Optional[dict]) -> dict:
+        """Return a context dictionary for child streams."""
+        return {
+            "client_uuid": record["uuid"],
+        }
+
 class ContractStream(ClientSuccessStreamV2):
     """Contact stream.
 

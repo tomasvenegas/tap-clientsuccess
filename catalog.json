@@ -2766,50 +2766,6 @@
               "null",
               "array"
             ]
-          },
-          "externalSystems": {
-            "properties": {
-              "HUBSPOT": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "FRESHDESK": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "FRESHDESK_V2": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "INTERCOM": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "ZOHOCRM": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "PIPEDRIVE": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              }
-            },
-            "type": [
-              "null",
-              "object"
-            ]
           }
         },
         "type": [
@@ -3127,6 +3083,667 @@
           }
         },
         {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": [
+              "id"
+            ],
+            "valid-replication-keys": [
+              "modifiedTime"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "contactsv2_detail",
+      "replication_method": "FULL_TABLE",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "integer"
+            ]
+          },
+          "createdTime": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "modifiedTime": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "custom": {
+            "properties": {
+              "producto__cs": {
+                "type": [
+                  "null",
+                  "array"
+                ]
+              },
+              "idioma__cs": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "hubspot_id__cs": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "no_envio_de_links__cs": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              },
+              "no_update_producto__cs": {
+                "type": [
+                  "null",
+                  "boolean"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "uuid": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "firstName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "lastName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "title": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "email": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "phone": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "mobile": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "salesforceId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "linkedinUrl": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "advocate": {
+            "type": [
+              "boolean"
+            ]
+          },
+          "champion": {
+            "type": [
+              "boolean"
+            ]
+          },
+          "executiveSponsor": {
+            "type": [
+              "boolean"
+            ]
+          },
+          "starred": {
+            "type": [
+              "boolean"
+            ]
+          },
+          "keyContact": {
+            "type": [
+              "boolean"
+            ]
+          },
+          "street": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "city": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "state": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "zip": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "country": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "timezone": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "notes": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "externalId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "usageId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "engagementCount": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "lastEngagementDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "tenant": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "tenantClient": {
+            "properties": {
+              "id": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "uuid": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "status": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "address": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "badges": {
+            "items": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "externalSystems": {
+            "properties": {
+              "HUBSPOT": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "FRESHDESK": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "FRESHDESK_V2": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "INTERCOM": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ZOHOCRM": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "PIPEDRIVE": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": true
+      },
+      "stream": "contactsv2_detail",
+      "metadata": [
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "createdTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "modifiedTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "custom"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "uuid"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "firstName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "lastName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "title"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "email"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "phone"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "mobile"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "salesforceId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "linkedinUrl"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "advocate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "champion"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "executiveSponsor"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "starred"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "keyContact"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "street"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "city"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "state"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "zip"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "country"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "timezone"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "notes"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "externalId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "usageId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "engagementCount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "lastEngagementDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tenant"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tenantClient"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "address"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "badges"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
           "breadcrumb": [
             "properties",
             "externalSystems"
@@ -3142,9 +3759,6 @@
             "selected": true,
             "table-key-properties": [
               "id"
-            ],
-            "valid-replication-keys": [
-              "modifiedTime"
             ]
           }
         }
