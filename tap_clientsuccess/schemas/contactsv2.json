@@ -112,6 +112,17 @@
                   }
                 }
             }
+        },
+        "externalSystems": {
+            "type": ["null", "object"],
+            "properties": {
+                "HUBSPOT": { "type": ["null", "string"] },
+                "FRESHDESK": { "type": ["null", "string"] },
+                "FRESHDESK_V2": { "type": ["null", "string"] },
+                "INTERCOM": { "type": ["null", "string"] },
+                "ZOHOCRM": { "type": ["null", "string"] },
+                "PIPEDRIVE": { "type": ["null", "string"] }
+            }
         }
     }
   }
