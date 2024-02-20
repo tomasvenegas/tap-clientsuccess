@@ -5,10 +5,7 @@
     "id": { "type": ["integer"] },
     "note": { "type": ["null", "string"] },
     "createdByEmployeeId": { "type": ["null", "integer"] },
-    "createdDateTime": {
-      "type": ["null", "string"],
-      "format": "date-time"
-    },
+    "createdDateTime": { "type": ["null", "string"] },
     "clientId": { "type": ["null", "integer"] },
     "filePath": { "type": ["null", "string"] },
     "interactionTypeId": { "type": ["null", "integer"] },
