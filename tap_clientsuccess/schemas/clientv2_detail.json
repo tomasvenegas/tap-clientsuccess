@@ -11,6 +11,28 @@
         "type": ["null", "string"],
         "format": "date-time"
       },
+      "custom": {
+        "type": ["null", "object"],
+        "properties": {
+          "uso_mity_reu__cs": { "type": ["null", "boolean"] },
+          "responsable_cx__cs": { "type": ["null", "string"] },
+          "total_empleados__cs": { "type": ["null", "integer"] },
+          "clima_desmepeno__cs": { "type": ["null", "string"] },
+          "estado_comercial__cs": { "type": ["null", "string"] },
+          "integraci__cs": { "type": ["null", "string"] },
+          "id_rankmi__cs": { "type": ["null", "integer"] },
+          "comunicaci__cs": { "type": ["null", "boolean"] },
+          "total_users__cs": { "type": ["null", "integer"] },
+          "buk_talana_geo__cs": { "type": ["null", "string"] },
+          "tiene_talento_9_box__cs": { "type": ["null", "string"] },
+          "estado_integracion_master__cs": { "type": ["null", "string"] },
+          "estrategia_cx__cs": { "type": ["null", "string"] },
+          "total_users_in_contract__cs": { "type": ["null", "integer"] },
+          "estado_integracion_login__cs": { "type": ["null", "string"] },
+          "industry__cs": { "type": ["null", "string"] },
+          "fecha___cs": { "type": ["null", "string"],  "format": "date-time" }
+        }
+      },
       "uuid": { "type": ["null", "string"] },
       "name": { "type": ["null", "string"] },
       "logoUrl": { "type": ["null", "string"] },
@@ -47,127 +69,127 @@
           "name": { "type": ["null", "string"] },
           "used": { "type": ["null", "integer"] }
         }
-    },
-    "timezone": { "type": ["null", "string"] },
-    "externalId": { "type": ["null", "string"] },
-    "npsScore": { "type": ["null", "integer"] },
-    "note": { "type": ["null", "string"] },
-    "currency": { "type": ["null", "string"] },
-    "accTeamingRoles": {
-        "type": ["null", "array"],
-        "items": {
+      },
+      "timezone": { "type": ["null", "string"] },
+      "externalId": { "type": ["null", "string"] },
+      "npsScore": { "type": ["null", "integer"] },
+      "note": { "type": ["null", "string"] },
+      "currency": { "type": ["null", "string"] },
+      "accTeamingRoles": {
+          "type": ["null", "array"],
+          "items": {
+            "type": ["null", "object"],
+            "properties": {
+              "id": { "type": ["null", "integer"] },
+              "tenantId": { "type": ["null", "integer"] },
+              "clientId": { "type": ["null", "integer"] },
+              "employee": { "type": ["null", "string"] },
+              "role": { "type": ["null", "string"] }
+            }
+          }
+        },
+        "assignedSalesRepAssociation": {
           "type": ["null", "object"],
           "properties": {
             "id": { "type": ["null", "integer"] },
-            "tenantId": { "type": ["null", "integer"] },
-            "clientId": { "type": ["null", "integer"] },
-            "employee": { "type": ["null", "string"] },
-            "role": { "type": ["null", "string"] }
+            "firstname": { "type": ["null", "string"] },
+            "lastname": { "type": ["null", "string"] },
+            "email": { "type": ["null", "string"] },
+            "reportTo": { "type": ["null", "integer"] },
+            "picture": { "type": ["null", "string"] },
+            "name": { "type": ["null", "string"] }
           }
-        }
       },
-      "assignedSalesRepAssociation": {
-        "type": ["null", "object"],
-        "properties": {
-          "id": { "type": ["null", "integer"] },
-          "firstname": { "type": ["null", "string"] },
-          "lastname": { "type": ["null", "string"] },
-          "email": { "type": ["null", "string"] },
-          "reportTo": { "type": ["null", "integer"] },
-          "picture": { "type": ["null", "string"] },
-          "name": { "type": ["null", "string"] }
-        }
-    },
-    "managedByEmployee": {
-        "type": ["null", "object"],
-        "properties": {
-          "id": { "type": ["null", "integer"] },
-          "firstname": { "type": ["null", "string"] },
-          "lastname": { "type": ["null", "string"] },
-          "email": { "type": ["null", "string"] },
-          "reportTo": { "type": ["null", "integer"] },
-          "picture": { "type": ["null", "string"] },
-          "name": { "type": ["null", "string"] }
-        }
-    },
-    "createdByEmployee": {
-        "type": ["null", "object"],
-        "properties": {
-          "id": { "type": ["null", "integer"] },
-          "firstname": { "type": ["null", "string"] },
-          "lastname": { "type": ["null", "string"] },
-          "email": { "type": ["null", "string"] },
-          "reportTo": { "type": ["null", "integer"] },
-          "picture": { "type": ["null", "string"] },
-          "name": { "type": ["null", "string"] }
-        }
-    },
-    "modifiedByEmployee": {
-        "type": ["null", "object"],
-        "properties": {
-          "id": { "type": ["null", "integer"] },
-          "firstname": { "type": ["null", "string"] },
-          "lastname": { "type": ["null", "string"] },
-          "email": { "type": ["null", "string"] },
-          "reportTo": { "type": ["null", "integer"] },
-          "picture": { "type": ["null", "string"] },
-          "name": { "type": ["null", "string"] }
-        }
-    },
-    "primaryContact": {
-        "type": ["null", "object"],
-        "properties": {
-          "id": { "type": ["null", "integer"] },
-          "firstname": { "type": ["null", "string"] },
-          "lastname": { "type": ["null", "string"] }
-        }
-    },
-    "clientType": {
-        "type": ["null", "object"],
-        "properties": {
-          "id": { "type": ["null", "integer"] },
-          "title": { "type": ["null", "string"] },
-          "key": { "type": ["null", "integer"] }
-        }
-    },
-    "clientSegmentId": { "type": ["null", "integer"] },
-    "segment": { "type": ["null", "integer"] },
-    "parentClient": {
-        "type": ["null", "object"],
-        "properties": {
-          "id": { "type": ["null", "integer"] },
-          "uuid": { "type": ["null", "string"] },
-          "name": { "type": ["null", "string"] },
-          "externalId": { "type": ["null", "string"] },
-          "clientTypeId": { "type": ["null", "integer"] },
-          "managedByEmployeeId": { "type": ["null", "integer"] },
-          "regionId": { "type": ["null", "integer"] },
-          "externalSystems": {
-            "type": ["null", "object"],
-            "properties": {
-                "HUBSPOT": { "type": ["null", "string"] },
-                "FRESHDESK": { "type": ["null", "string"] },
-                "FRESHDESK_V2": { "type": ["null", "string"] },
-                "INTERCOM": { "type": ["null", "string"] },
-                "ZOHOCRM": { "type": ["null", "string"] },
-                "PIPEDRIVE": { "type": ["null", "string"] }
+      "managedByEmployee": {
+          "type": ["null", "object"],
+          "properties": {
+            "id": { "type": ["null", "integer"] },
+            "firstname": { "type": ["null", "string"] },
+            "lastname": { "type": ["null", "string"] },
+            "email": { "type": ["null", "string"] },
+            "reportTo": { "type": ["null", "integer"] },
+            "picture": { "type": ["null", "string"] },
+            "name": { "type": ["null", "string"] }
+          }
+      },
+      "createdByEmployee": {
+          "type": ["null", "object"],
+          "properties": {
+            "id": { "type": ["null", "integer"] },
+            "firstname": { "type": ["null", "string"] },
+            "lastname": { "type": ["null", "string"] },
+            "email": { "type": ["null", "string"] },
+            "reportTo": { "type": ["null", "integer"] },
+            "picture": { "type": ["null", "string"] },
+            "name": { "type": ["null", "string"] }
+          }
+      },
+      "modifiedByEmployee": {
+          "type": ["null", "object"],
+          "properties": {
+            "id": { "type": ["null", "integer"] },
+            "firstname": { "type": ["null", "string"] },
+            "lastname": { "type": ["null", "string"] },
+            "email": { "type": ["null", "string"] },
+            "reportTo": { "type": ["null", "integer"] },
+            "picture": { "type": ["null", "string"] },
+            "name": { "type": ["null", "string"] }
+          }
+      },
+      "primaryContact": {
+          "type": ["null", "object"],
+          "properties": {
+            "id": { "type": ["null", "integer"] },
+            "firstname": { "type": ["null", "string"] },
+            "lastname": { "type": ["null", "string"] }
+          }
+      },
+      "clientType": {
+          "type": ["null", "object"],
+          "properties": {
+            "id": { "type": ["null", "integer"] },
+            "title": { "type": ["null", "string"] },
+            "key": { "type": ["null", "integer"] }
+          }
+      },
+      "clientSegmentId": { "type": ["null", "integer"] },
+      "segment": { "type": ["null", "integer"] },
+      "parentClient": {
+          "type": ["null", "object"],
+          "properties": {
+            "id": { "type": ["null", "integer"] },
+            "uuid": { "type": ["null", "string"] },
+            "name": { "type": ["null", "string"] },
+            "externalId": { "type": ["null", "string"] },
+            "clientTypeId": { "type": ["null", "integer"] },
+            "managedByEmployeeId": { "type": ["null", "integer"] },
+            "regionId": { "type": ["null", "integer"] },
+            "externalSystems": {
+              "type": ["null", "object"],
+              "properties": {
+                  "HUBSPOT": { "type": ["null", "string"] },
+                  "FRESHDESK": { "type": ["null", "string"] },
+                  "FRESHDESK_V2": { "type": ["null", "string"] },
+                  "INTERCOM": { "type": ["null", "string"] },
+                  "ZOHOCRM": { "type": ["null", "string"] },
+                  "PIPEDRIVE": { "type": ["null", "string"] }
+              }
             }
           }
+      },
+      "address": { "type": ["null", "string"] },
+      "modifiedByEmployeeId": { "type": ["null", "integer"] },
+      "noteAsText": { "type": ["null", "string"] },
+      "externalSystems": {
+          "type": ["null", "object"],
+          "properties": {
+              "HUBSPOT": { "type": ["null", "string"] },
+              "FRESHDESK": { "type": ["null", "string"] },
+              "FRESHDESK_V2": { "type": ["null", "string"] },
+              "INTERCOM": { "type": ["null", "string"] },
+              "ZOHOCRM": { "type": ["null", "string"] },
+              "PIPEDRIVE": { "type": ["null", "string"] }
+          }
         }
-    },
-    "address": { "type": ["null", "string"] },
-    "modifiedByEmployeeId": { "type": ["null", "integer"] },
-    "noteAsText": { "type": ["null", "string"] },
-    "externalSystems": {
-        "type": ["null", "object"],
-        "properties": {
-            "HUBSPOT": { "type": ["null", "string"] },
-            "FRESHDESK": { "type": ["null", "string"] },
-            "FRESHDESK_V2": { "type": ["null", "string"] },
-            "INTERCOM": { "type": ["null", "string"] },
-            "ZOHOCRM": { "type": ["null", "string"] },
-            "PIPEDRIVE": { "type": ["null", "string"] }
-        }
-      }
     }
   }
