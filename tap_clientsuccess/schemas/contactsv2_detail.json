@@ -18,7 +18,9 @@
             "idioma__cs": { "type": ["null", "string"] },
             "hubspot_id__cs": { "type": ["null", "string"] },
             "no_envio_de_links__cs": { "type": ["null", "boolean"] },
-            "no_update_producto__cs": { "type": ["null", "boolean"] }
+            "no_update_producto__cs": { "type": ["null", "boolean"] },
+            "no_encuestas_satisfaccion__cs": { "type": ["null", "boolean"] },
+            "no_comunicaciones_masivas__cs": { "type": ["null", "boolean"] 
             }
     },
      "uuid": { "type": ["null", "string"] },
